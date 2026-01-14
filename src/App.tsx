@@ -10,7 +10,7 @@ export const App = () => {
   const [todos, setTodos] = useState<Todo[]>(
     todosFromServer
       .map(todo => {
-        const user = usersFromServer.find(u => u.id === todo.userId);
+        const user = usersFromServer.find(umper => umper.id === todo.userId);
 
         if (!user) {
           return null;
@@ -38,7 +38,7 @@ export const App = () => {
     }
 
     const userIdNumber = parseInt(userId, 10);
-    const user = usersFromServer.find(u => u.id === userIdNumber);
+    const user = usersFromServer.find(umper => umper.id === userIdNumber);
 
     if (!user) {
       return;
